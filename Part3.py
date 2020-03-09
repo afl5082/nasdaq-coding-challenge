@@ -18,7 +18,7 @@ c = conn.cursor()
 
 
 """GATHERING TIMESTAMPS FROM EACH TABLE AND PUTTING THEM IN A LIST"""
-qts_times = c.execute('SELECT timestamp FROM qts where timestamp >= 34200000 and \
+qts_times = c.execute('SELECT timestamp FROM qts where timestamp >= 34100000 and \
 timestamp <= 57600000').fetchall()
 
 trds_times = c.execute("SELECT timestamp FROM trds where timestamp >= 34200000 and \
@@ -50,21 +50,24 @@ trds_timesmatched =[]
 b = 0
 for i in trds_times[:100]:
 	#closest_value = min(qts_times, key=lambda x: (abs(x-i),x))
-	closest_value = min(qts_times, key=lambda x:abs(x-i))
-	if closest_value > i:
-		closest_value = qts_times[b-1]
+	closest_value = min(qts_times, key=lambda x:(abs(x-i),x))
+	position = qts_times.index(closest_value)
+	if closest_value > i and b != 0:
+		closest_value = qts_times[position-1]
+		
 	#IF CLOSEST VALUE IS GREATER THAN i (TRADE TS) THEN GO BACK 1
 	
 	qts_timesmatched.append(closest_value)
 	trds_timesmatched.append(i)
+	b=b +1
 	
-for i in trds_times[100000:100051]:
+for i in trds_times[100000:100050]:
 	closest_value = min(qts_times, key=lambda x: (abs(x-i),x))
 	
 	qts_timesmatched.append(closest_value)
 	trds_timesmatched.append(i)
 	
-print(trds_timesmatched[5])
+print(qts_timesmatched[0])
 #TEST ^
 
 conn.close()
@@ -141,7 +144,6 @@ join qts b on qts_timestamp = b.timestamp")
 table = sql.read_sql(t_q, conn)
 table.to_csv('TradesAndQuotes_v02.csv')
 #print(c.fetchall())
-
 
 
 
