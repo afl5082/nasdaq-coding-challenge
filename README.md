@@ -1,4 +1,4 @@
-# NASDAQ Code Challenge 
+# NASDAQ Coding Challenge 
 
 I discovered this challenge through a computer science forum and thought it would be good practice combining my SQL and Python knowledge. The basis of the challenges worked with NASDAQ intraday stock data for four paticular stocks. The trade table holds all trades for four stocks on August 03, 2015. 
 
@@ -27,9 +27,9 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
+## Part 3
 
-Explain how to run the automated tests for this system
+* Match each last-sale eligible trade with the national best bid and offer that was in effect for the stock at the time when the trade occurred 
 
 ### Break down into end to end tests
 
