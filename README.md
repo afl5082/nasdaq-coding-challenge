@@ -19,10 +19,11 @@ I discovered this challenge through a computer science forum and thought it woul
 * Provide max, min, average and last price for each 5-minute time period for each stock (only include market hours 9:30-16:00) 
 
 
-And repeat
+First step in Part 2 was to define the time chunks of a five minute period and match that with the timestamp variable in the database.
 
 ```
-until finished
+timebuckets = ("select a.RefDate, a.Symbol, cast(a.timestamp /300e3 as int) atimeBucket,\
+time((cast(a.timestamp /300e3 as int) * 300000) /1000, 'unixepoch') as startTime.... 
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
