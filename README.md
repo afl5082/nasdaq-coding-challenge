@@ -13,16 +13,11 @@ I discovered this challenge through a computer science forum and thought it woul
 *	Write this table to a .csv 
 
 
+## Part 2
 
-### Installing
+* Summarize trading within each 5 minute period.
+* Provide max, min, average and last price for each 5-minute time period for each stock (only include market hours 9:30-16:00) 
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
 
 And repeat
 
@@ -37,14 +32,6 @@ End with an example of getting some data out of the system or using it for a lit
 Explain how to run the automated tests for this system
 
 ### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
 
 Explain what these tests test and why
 
