@@ -1,10 +1,18 @@
 # NASDAQ Code Challenge 
 
-I discovered this challenge through a computer science forum and thought it would be good practice combining my SQL and Python knowledge. 
+I discovered this challenge through a computer science forum and thought it would be good practice combining my SQL and Python knowledge. The basis of the challenges worked with NASDAQ intraday stock data for four paticular stocks. The trade table holds all trades for four stocks on August 03, 2015. 
 
-## Getting Started
+## Part 1
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+* For each stock, get the prices from the opening and closing cross trades on NASDAQ. 
+* For each stock get the min, max, average and VWAP for consolidated last-sale eliglbe trades. 
+* For each stock, get the total share volume and number of trades for volume-elgible trades
+* Combine all of the results above in a single table, with one row per stock. 
+*	Calculate the percent price range for each stock [use (max-min)/close].
+*	Sort them from most to least volatile as measured by PctRange.
+*	Write this table to a .csv 
+
+
 
 ### Installing
 
