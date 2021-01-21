@@ -31,13 +31,15 @@ End with an example of getting some data out of the system or using it for a lit
 ## Part 3
 
 * Match each last-sale eligible trade with the national best bid and offer that was in effect for the stock at the time when the trade occurred 
+* The output files should only include the first 100 trades and trades 100,000 through 100,050
 
 ### Break down into end to end tests
 
-Explain what these tests test and why
+
 
 ```
-Give an example
+"""SLICING ONLY THE FIRST 100 VALUES AND LAST 50.
+LOOPING THROUGH EACH USING A MIN LAMBDA FUNCTION TO EXTRACT NEAREST LESS THAN
 ```
 
 ## Built With
