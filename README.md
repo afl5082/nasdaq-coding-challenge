@@ -26,8 +26,6 @@ timebuckets = ("select a.RefDate, a.Symbol, cast(a.timestamp /300e3 as int) atim
 time((cast(a.timestamp /300e3 as int) * 300000) /1000, 'unixepoch') as startTime.... 
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
 ## Part 3
 
 * Match each last-sale eligible trade with the national best bid and offer that was in effect for the stock at the time when the trade occurred 
