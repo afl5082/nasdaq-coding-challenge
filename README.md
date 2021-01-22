@@ -32,15 +32,19 @@ time((cast(a.timestamp /300e3 as int) * 300000) /1000, 'unixepoch') as startTime
 * The output files should only include the first 100 trades and trades 100,000 through 100,050
 
 
-Snippet of code to find the closest value for each timebucket 
+Snippet of code to find the closest value between bid and offers for the first 100 trades 
 
 
 ```
-"""SLICING ONLY THE FIRST 100 VALUES AND LAST 50.
-LOOPING THROUGH EACH USING A MIN LAMBDA FUNCTION TO EXTRACT NEAREST LESS THAN
-
-for i in trds_times[100000:100050]:
-	closest_value = min(qts_times, key=lambda x: (abs(x-i),x))
+for i in trds_times[:100]:
+	closest_value = min(qts_times, key=lambda x:(abs(x-i),x))
+	position = qts_times.index(closest_value)
+	if closest_value > i and b != 0:
+		closest_value = qts_times[position-1]
+		
+	#IF CLOSEST VALUE IS GREATER THAN i (TRADE TS) THEN GO BACK 1
+	
+	qts_timesmatched.append(closest_value)
 ```
 
 ## Built With
