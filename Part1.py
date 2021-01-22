@@ -10,7 +10,7 @@ c = conn.cursor()
  		THIS WAS QUICKER THAN MULTIPLE SUBQUERIES """
 
 
-#--PREVIEW TABEL DATA
+#--EXPLORING TABLE DATA
 #res = c.execute("SELECT name from sqlite_master where type = 'table';")
 
 #for name in res:
