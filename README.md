@@ -40,6 +40,9 @@ End with an example of getting some data out of the system or using it for a lit
 ```
 """SLICING ONLY THE FIRST 100 VALUES AND LAST 50.
 LOOPING THROUGH EACH USING A MIN LAMBDA FUNCTION TO EXTRACT NEAREST LESS THAN
+
+for i in trds_times[100000:100050]:
+	closest_value = min(qts_times, key=lambda x: (abs(x-i),x))
 ```
 
 ## Built With
