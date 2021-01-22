@@ -31,8 +31,8 @@ time((cast(a.timestamp /300e3 as int) * 300000) /1000, 'unixepoch') as startTime
 * Match each last-sale eligible trade with the national best bid and offer that was in effect for the stock at the time when the trade occurred 
 * The output files should only include the first 100 trades and trades 100,000 through 100,050
 
-### Break down into end to end tests
 
+Snippet of code to find the closest value for each timebucket 
 
 
 ```
