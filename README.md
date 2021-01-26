@@ -50,6 +50,7 @@ for i in trds_times[:100]:
 ## Built With
 
 * [sqlite3](https://docs.python.org/3/library/sqlite3.html#module-sqlite3) - Used to manage and query given database file
+* [pandas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_numpy.html) - Queried data was placed into dataframes 
  
 ## Authors
 
